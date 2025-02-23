@@ -22,7 +22,7 @@ const Categories = ({ showIntro = true }) => {
         </div>
       )}
       <div>
-        <div className="sm:grid-cols-3 md:grid-cols-4 mx-auto grid max-w-4xl grid-cols-2 gap-4 lg:grid-cols-5">
+        <div className="sm:grid-cols-3 md:grid-cols-4 mx-auto grid max-w-[380px] sm:max-w-[560px] md:max-w-4xl grid-cols-2 gap-4 lg:grid-cols-5">
           {CATEGORIES.map((category, index) => (
             <Link
               href={`/discover/${category.name.toLowerCase().replace(/\s+/g, "-")}`}
@@ -30,7 +30,7 @@ const Categories = ({ showIntro = true }) => {
               className="flex flex-col items-center justify-center transition-transform hover:scale-105"
             >
               <div className="mx-auto mb-2 flex h-[10rem] w-full items-center justify-center rounded-[10px] bg-[#F7F7F6] transition-colors hover:bg-gray-100">
-                <div className="h-[56px] w-[56px] xl:h-[64px] xl:w-[64px]">
+                <div className="h-[48px] w-[48px] xl:h-[64px] xl:w-[64px]">
                   <Image
                     src={category.imageUrl}
                     alt={category.name}
